@@ -167,6 +167,6 @@ public class SoundTile extends QSTileImpl<BooleanState> {
 
     @Override
     public int getMetricsCategory() {
-        return MetricsEvent.AWAKEN;
+        return MetricsEvent.LESSAOSP;
     }
 }

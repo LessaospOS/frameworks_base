@@ -164,7 +164,7 @@ interface IStatusBarService
     void startAssist(in Bundle args);
 
     /**
-     * Awaken extensions
+     * Lessaosp extensions
      */
     void toggleCameraFlash();
 

@@ -290,7 +290,7 @@ oneway interface IStatusBar
     void runGcForTest();
 
     /**
-     * Awaken extensions
+     * Lessaosp extensions
      */
     void toggleCameraFlash();
 
