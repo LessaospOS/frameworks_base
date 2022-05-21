@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.internal.awaken.hardware;
+package com.android.internal.lessaosp.hardware;
 
 import android.util.Range;
 

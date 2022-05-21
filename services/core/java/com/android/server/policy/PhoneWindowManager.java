@@ -208,7 +208,7 @@ import com.android.internal.policy.LogDecelerateInterpolator;
 import com.android.internal.policy.PhoneWindow;
 import com.android.internal.policy.TransitionAnimation;
 import com.android.internal.statusbar.IStatusBarService;
-import com.android.internal.util.awaken.AwakenUtils;
+import com.android.internal.util.lessaosp.LessaospUtils;
 import com.android.internal.util.ArrayUtils;
 import com.android.internal.util.ScreenshotHelper;
 import com.android.server.ExtconStateObserver;
@@ -2180,12 +2180,12 @@ public class PhoneWindowManager implements WindowManagerPolicy {
         if (mTorchActionMode == 2 && longpress) {
             performHapticFeedback(HapticFeedbackConstants.LONG_PRESS, false,
                     "Power - Long Press - Torch");
-            AwakenUtils.toggleCameraFlash();
+            LessaospUtils.toggleCameraFlash();
             return true;
         } else if (mTorchActionMode == 1 && !longpress) {
             performHapticFeedback(HapticFeedbackConstants.LONG_PRESS, false,
                       "Power - Double Press - Torch");
-            AwakenUtils.toggleCameraFlash();
+            LessaospUtils.toggleCameraFlash();
             return true;
         }
         return false;
@@ -5717,13 +5717,13 @@ public class PhoneWindowManager implements WindowManagerPolicy {
     public void sendCustomAction(Intent intent) {
         String action = intent.getAction();
         if (action != null) {
-            if (AwakenUtils.INTENT_SCREENSHOT.equals(action)) {
+            if (LessaospUtils.INTENT_SCREENSHOT.equals(action)) {
                 mContext.enforceCallingOrSelfPermission(Manifest.permission.ACCESS_SURFACE_FLINGER,
                         TAG + "sendCustomAction permission denied");
                 mHandler.removeCallbacks(mScreenshotRunnable);
                 mScreenshotRunnable.setScreenshotType(TAKE_SCREENSHOT_FULLSCREEN);
                 mHandler.post(mScreenshotRunnable);
-            } else if (AwakenUtils.INTENT_REGION_SCREENSHOT.equals(action)) {
+            } else if (LessaospUtils.INTENT_REGION_SCREENSHOT.equals(action)) {
                 mContext.enforceCallingOrSelfPermission(Manifest.permission.ACCESS_SURFACE_FLINGER,
                         TAG + "sendCustomAction permission denied");
                 mHandler.removeCallbacks(mScreenshotRunnable);

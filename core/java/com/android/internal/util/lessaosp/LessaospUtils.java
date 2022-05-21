@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.internal.util.awaken;
+package com.android.internal.util.lessaosp;
 
 import static android.view.DisplayCutout.BOUNDS_POSITION_LEFT;
 import static android.view.DisplayCutout.BOUNDS_POSITION_RIGHT;
@@ -64,12 +64,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
-public class AwakenUtils {
+public class LessaospUtils {
 
     public static final String INTENT_SCREENSHOT = "action_handler_screenshot";
     public static final String INTENT_REGION_SCREENSHOT = "action_handler_region_screenshot";
 
-    private static final String TAG = "AwakenUtils";
+    private static final String TAG = "LessaospUtils";
 
     private static final boolean DEBUG = false;
 

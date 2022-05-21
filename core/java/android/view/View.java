@@ -2464,7 +2464,7 @@ public class View implements Drawable.Callback, KeyEvent.Callback,
      *         11                        PFLAG_OPAQUE_MASK
      *        1                          PFLAG_PREPRESSED
      *       1                           PFLAG_CANCEL_NEXT_UP_EVENT
-     *      1                            PFLAG_AWAKEN_SCROLL_BARS_ON_ATTACH
+     *      1                            PFLAG_LESSAOSP_SCROLL_BARS_ON_ATTACH
      *     1                             PFLAG_HOVERED
      *    1                              PFLAG_NOTIFY_AUTOFILL_MANAGER_ON_CLICK
      *   1                               PFLAG_ACTIVATED
@@ -2594,7 +2594,7 @@ public class View implements Drawable.Callback, KeyEvent.Callback,
      *
      * @hide
      */
-    private static final int PFLAG_AWAKEN_SCROLL_BARS_ON_ATTACH = 0x08000000;
+    private static final int PFLAG_LESSAOSP_SCROLL_BARS_ON_ATTACH = 0x08000000;
 
     /**
      * Indicates that the view has received HOVER_ENTER.  Cleared on HOVER_EXIT.
